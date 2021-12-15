@@ -45,3 +45,37 @@
  <span class="pop" style="padding:10px;"  data-toggle="popover" data-placement="right" data-content="<div class='link-Updown'><a href='#'><%#Eval("CustomerEmail") %></a><a href='#'></a></div> <br /><%#Eval("CustomerPhone") %>">
                                                             <%#Eval("CustomerName") %>
                                                         </span>
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        Sample Code with link 
+                                                        
+                                                        https://stackoverflow.com/questions/54618503/how-to-click-on-a-link-inside-the-data-content-of-a-pop-over
+                                                        
+                                                        <a href="#" data-toggle="popover-upload" data-content="
+<div class='link-Updown'>
+  <a href='#'>Upload</a>
+  <a href='#'>Download</a>
+</div>">
+  Upload/Download
+</a>
+
+<script>
+$(document).ready(function() {
+  $('[data-toggle="popover-upload"]').popover({ html: true });
+
+  // delegate click event from the document
+  $(document).on("click", ".link-Updown a", function(event) {
+    event.preventDefault();
+    console.log("download or upload clicked")
+  })
+});
+</script>
